@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<modification
+                xmlns="https://github.com/vqmod/vqmod"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="https://github.com/vqmod/vqmod https://raw.githubusercontent.com/vqmod/vqmod/master/vqmod.xsd">
+                >
+		<id>DisableAffiliateLinks</id>
+		<version>1.0</version>
+		<vqmver>2.6.6</vqmver>
+		<author>ANybakk</author>
+		<file name="catalog/view/theme/default/template/common/footer.twig">
+			<operation info="comment out">
+				<search position="replace"><![CDATA[<li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>]]></search>
+				<add><![CDATA[{#<li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>#}]]></add>
+			</operation>
+		</file>
+		<file name="catalog/view/theme/default/template/account/account.twig">
+			<operation info="comment out before header">
+				<search position="ibefore"><![CDATA[<h2>{{ text_my_affiliate }}</h2>]]></search>
+				<add><![CDATA[{#]]></add>
+			</operation>
+			<operation info="comment out up to next header">
+				<search position="ibefore"><![CDATA[<h2>{{ text_my_newsletter }}</h2>]]></search>
+				<add><![CDATA[#}]]></add>
+			</operation>
+		</file>
+	</modification>
