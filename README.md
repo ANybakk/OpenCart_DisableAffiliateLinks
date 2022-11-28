@@ -1,4 +1,4 @@
-# OpenCart_DisableAffiliateLinks
+# opencart-disable-affiliate-links
  Disables affiliate links in OpenCard. Assumes vqmod installed.
 
 Extract into your OpenCart installation folder. Easy peasy.
